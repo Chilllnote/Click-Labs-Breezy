@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: ./frontend  # Tells Docker to look in the nested folder
+      dockerfile: Dockerfile
+    container_name: vite-frontend
+    ports:
+      - "5173:5173"        # Maps host port to container port
+    volumes:
+      - ./frontend:/app    # Enable Hot Module Replacement (HMR) by syncing code
+      - /app/node_modules  # Prevents local node_modules from overwriting container's
+    environment:
+      - VITE_PORT=5173
+    restart: always
