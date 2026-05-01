@@ -16,8 +16,8 @@ import BlogPost from './pages/Dynamic pages/BlogPost';
 const client = new ApolloClient({
   //link: new HttpLink({ uri: "http://local-breezy.local/graphql" }),
   link: new HttpLink({
-    uri: "https://breezy-wordpress.duckdns.org/graphql"
-    //credentials: 'include' // Include cookies for authentication if needed}),
+    uri: "https://breezy-wordpress.duckdns.org/graphql",
+    credentials: 'include' // Include cookies for authentication if needed}),
   }),
   cache: new InMemoryCache(),
 });

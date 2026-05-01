@@ -60,11 +60,12 @@ const Header: React.FC = () => {
 
             {/* Mobile Menu Overlay */}
             <div className={`mobile-menu ${isMobileOpen ? 'open' : ''}`}>
-                <a href="#features" onClick={toggleMobile}>Features</a>
-                <a href="#how" onClick={toggleMobile}>How It Works</a>
-                <a href="#pricing" onClick={toggleMobile}>Pricing</a>
+                <a href="/#features" onClick={toggleMobile}>Features</a>
+                <a href="/#how" onClick={toggleMobile}>How It Works</a>
+                <a href="/pricing#pricing" onClick={toggleMobile}>Pricing</a>
                 <div className="mobile-divider"></div>
-                <a href="#faq" onClick={toggleMobile}>FAQ</a>
+                <a href="/blog" onClick={toggleMobile}>Blog</a>
+                <a href="/about#faq" onClick={toggleMobile}>About</a>
                 <a href="#signup" onClick={toggleMobile}>Book Air</a>
             </div>
         </>
