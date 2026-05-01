@@ -17,7 +17,7 @@ const client = new ApolloClient({
   //link: new HttpLink({ uri: "http://local-breezy.local/graphql" }),
   link: new HttpLink({
     uri: "https://breezy-wordpress.duckdns.org/graphql",
-    credentials: 'include' // Include cookies for authentication if needed}),
+    //credentials: 'include' // Include cookies for authentication if needed}),
   }),
   cache: new InMemoryCache(),
 });
@@ -50,12 +50,16 @@ const router = createBrowserRouter([
         index: true,
         element: <BlogPage />, // This could be a BlogList component in a real app
       },
+      {
+        path: ":slug",
+        element: <BlogPost />, // This would be your BlogPost component that fetches data based on slug
+      }
     ],
   },
-  {
-    path: "/blog/:slug",
-    element: <BlogPost />, // This would be your BlogPost component that fetches data based on slug
-  }
+  // {
+  //   path: "/blog/:slug",
+  //   element: <BlogPost />, // This would be your BlogPost component that fetches data based on slug
+  // }
 ]);
 
 function App() {

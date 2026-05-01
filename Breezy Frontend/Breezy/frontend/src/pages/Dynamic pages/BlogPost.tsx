@@ -80,7 +80,7 @@ const BlogPost: React.FC = () => {
             </div>
 
             <header className="blog-header">
-                <span className="blog-category">Engineering</span>
+                {/* <span className="blog-category">Engineering</span> */}
                 <h1 className="blog-title">{data.blog_post.title}</h1>
                 <p className="blog-subtitle">{data.blog_post.blogPostMeta.excerpt}</p>
                 <div className="blog-meta">
