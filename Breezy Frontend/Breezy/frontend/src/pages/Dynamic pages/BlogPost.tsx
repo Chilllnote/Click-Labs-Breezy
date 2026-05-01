@@ -2,6 +2,7 @@ import { gql } from '@apollo/client';
 import { useQuery } from '@apollo/client/react';
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 // Hardcoded fallback data
 const MOCK_POST = {
@@ -93,10 +94,11 @@ const BlogPost: React.FC = () => {
                 <img src={data.blog_post.blogPostMeta.image.node.sourceUrl} alt={data.blog_post.title} />
             </div>
 
-            <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: data.blog_post.blogPostMeta.textBody }}
-            />
+            <div className="blog-content">
+                <ReactMarkdown>
+                    {data.blog_post.blogPostMeta.textBody.replace(/\n/g, '\n\n')}
+                </ReactMarkdown>
+            </div>
         </article>
     );
 };
