@@ -43,7 +43,7 @@ Dependent on what they would need to change, you can create the post type for th
 
 With this defined, you would use ACF (Advanced Custom Fields) to then define the fields for the post. You would point a given custom field type to point to the new post type you've made so that each time they wish to make a new post, they would just fill in those fields. 
 
-![[Screenshot 2026-05-01 085738.png]]
+![ACF image](<Screenshot 2026-05-01 085738.png>)
 
 
 If there is any different information we would wish to change on the website (for example: pricing and what each tier would contain) we would define them following this process.
@@ -51,15 +51,15 @@ If there is any different information we would wish to change on the website (fo
 Next, we would test the query within the Wordpress GraphQL plugin (it having a connecting plugin for ACF). With these queries tested, we just have to make the query within our front-end application to see them appear. Full process visible below:
 
 *Creation of the Blog Post*
-![[Screenshot 2026-05-01 090758.png]]
+![Blog post page](<Screenshot 2026-05-01 090758.png>)
 
 
 *Query set-up to get all blog posts*
-![[Screenshot 2026-05-01 090707.png]]
+![GraphQL query](<Screenshot 2026-05-01 090707.png>)
 
 
 *How the query shows up within the website*
-![[Screenshot 2026-05-01 090826.png]]
+![Visual of Query](<Screenshot 2026-05-01 090826.png>)
 
 
 All in all, a non-technical person with access to the wordpress admin window would only need to fill out the sections defined within ACF while adding a new post to get that post to show up within the website.
