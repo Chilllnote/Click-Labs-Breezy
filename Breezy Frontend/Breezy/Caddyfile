@@ -1,0 +1,9 @@
+# Replace with your actual DuckDNS domain
+breezy-donovan.duckdns.org {
+    reverse_proxy frontend:5173
+}
+
+# Example: If you add your Spring Boot API later
+# api.breezy-donovan.duckdns.org {
+#     reverse_proxy backend:8080
+# }
