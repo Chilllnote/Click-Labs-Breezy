@@ -91,7 +91,12 @@ const BlogPost: React.FC = () => {
             </header>
 
             <div className="blog-featured-image">
-                <img src={data.blog_post.blogPostMeta.image.node.sourceUrl} alt={data.blog_post.title} />
+                {data?.blog_post?.blogPostMeta?.image?.node?.sourceUrl && (
+                    <img
+                        src={data.blog_post.blogPostMeta.image.node.sourceUrl}
+                        alt={data.blog_post.title || "Blog Image"}
+                    />
+                )}
             </div>
 
             <div className="blog-content">

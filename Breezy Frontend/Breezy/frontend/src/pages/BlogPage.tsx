@@ -77,7 +77,7 @@ const BlogPage: React.FC = () => {
                     <span className="badge"><span></span> Latest Updates</span>
                     <h1 className="section-title">Company <em>Insights</em></h1>
                     <p className="section-sub">
-                        Exploring the intersection of engineering, design, and digital innovation at Click Labs.
+                        Exploring everything there is to breathing with Breezy. Come read from our blog!
                     </p>
                 </div>
             </section>
